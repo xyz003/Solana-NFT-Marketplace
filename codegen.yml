@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://us-central1-digitaleyes-prod.cloudfunctions.net/go-digitaleyes-backend-gql"
+documents: "src/**/*.{ts,tsx}"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

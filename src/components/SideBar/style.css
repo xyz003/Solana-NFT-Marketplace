@@ -1,0 +1,225 @@
+.flex-1{
+
+    flex:none !important;
+}
+.badge-red {
+    padding: 3px 6px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    color: #ffffff;
+    background: #d63030;
+}
+
+.badge-gray {
+    padding: 3px 6px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    color: #ffffff;
+    background: black;
+}
+
+.badge-yellow {
+    padding: 3px 6px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    color: #000000;
+    background: #ffd331;
+}
+
+.sidebar-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-btn {
+    padding: 1px 15px;
+    background: rgba(255, 255, 255, 0.05)!important;
+    color: #adadad;
+    text-decoration: none;
+    margin: 10px auto;
+    height: 30px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 120px;
+}
+.sidebar-btn span {
+    margin-left: 5px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #adadad;
+    text-decoration: none;
+    border: none;
+    display: block;
+}
+.sidebar-btn:hover {
+    color: #d8d8d8;
+}
+
+.sidebar-header1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.sidebar-header2 {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: grey;
+    text-align: center;
+}
+
+.sidebar-header3 {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+}
+
+.grey-status {
+    background-color: #111111;
+    color: white;
+    padding: 0 10px;
+}
+
+.pro-sidebar {
+    --border-width: 2px;
+    position: fixed !important;
+    border-width: 0 0 0 0;
+    --angle: 0deg;
+    min-height: 80vh;
+    background-color: black;
+    width: 300px !important;
+    min-width: 300px !important;
+    text-align: left;
+    z-index: 0 !important;
+    height: 100%;
+}
+
+.pro-sidebar::after {
+    --border-width: 0px;
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width));
+    height: calc(100% + var(--border-width));
+    background: linear-gradient(0deg, #2ee9a8 25%, #cf35ec 50%, #2ee9a8 75%);
+    background-size: 400% 400%;
+    background-position: 50% 0;
+    animation: shimmer 8s alternate infinite;
+    opacity: 0.5;
+}
+
+.closemenu {
+    color: #000;
+    position: absolute;
+    right: 3px;
+    z-index: 9999;
+    line-height: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 22px;
+    top: 3px;
+    cursor: pointer;
+}
+
+.closemenu i {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.pro-sidebar-content {
+    background-color: black;
+}
+
+.pro-sidebar > .pro-sidebar-inner {
+    background-color: black!important;
+    min-height: 80vh;
+}
+
+.pro-sidebar-content {
+    position:relative;
+    border-width: 2px 0 0 0;
+    --angle: 0deg;
+    min-height: 80vh;
+    background-color: black;
+    text-align: left;
+    z-index: 0 !important;
+    height: 100%;
+}
+
+.pro-sidebar-content::after {
+    --border-width: 2px;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: 100%;
+    height: calc(var(--border-width));
+    background: linear-gradient(90deg, #2ee9a8 25%, #cf35ec 50%, #2ee9a8 75%);
+    background-size: 400% 400%;
+    background-position: 50% 0;
+    animation: shimmer 8s alternate infinite;
+    opacity: 0.5;
+}
+
+.pro-inner-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.small-sidebar {
+    --border-width: 0px;
+    position: fixed;
+    border-width: 0 var(--border-width) 0 0;
+    --angle: 0deg;
+    min-height: 80vh;
+    background-color: black;
+    width: 30px;
+    min-width: 30px;
+    text-align: left;
+    z-index: 0 !important;
+    height: 100%;
+}
+
+.small-sidebar::after {
+    --border-width: 0px;
+    position: absolute;
+    content: "";
+    left: 100%;
+    top: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: var(--border-width);
+    height: calc(100% + var(--border-width));
+    background: linear-gradient(0deg, #2ee9a8 25%, #cf35ec 50%, #2ee9a8 75%);
+    background-size: 400% 400%;
+    background-position: 50% 0;
+    animation: shimmer 8s alternate infinite;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-sidebar {
+        z-index: 3!important;
+        margin-right: -1000px;
+    }
+}
+
+@keyframes shimmer {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+    

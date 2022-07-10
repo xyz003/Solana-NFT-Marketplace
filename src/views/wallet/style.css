@@ -1,0 +1,42 @@
+.wallet {
+    position:relative;
+    float: right;
+    border-width: 0 0 0 2px;
+    --angle: 0deg;
+    min-height: 80vh;
+    background-color: black;
+    text-align: left;
+    z-index: 0 !important;
+}
+
+.wallet::after {
+    --border-width: 2px;
+    position: absolute;
+    content: "";
+    left: calc(-1 * var(--border-width));
+    top: calc(-1 * var(--border-width));
+    z-index: -1;
+    width:  var(--border-width);
+    min-height: calc(100% + var(--border-width));
+    background: linear-gradient(90deg, #2ee9a8 25%, #cf35ec 50%, #2ee9a8 75%);
+    background-size: 400% 400%;
+    background-position: 50% 0;
+    animation: shimmer 8s alternate infinite;
+    opacity: 0.5;
+}
+
+.collapsed-width {
+    width: calc(100vw - 45px);
+    margin-left: 45px;
+}
+
+.normal-width {
+    width: calc(100vw - 315px);
+    margin-left: 315px;
+}
+
+@keyframes shimmer {
+    50% {
+        background-position: 100% 50%;
+    }
+}
